@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'asd'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+test {
+    useJUnitPlatform()
+}
+dependencies {
+    compile group: 'org.apache.clerezza.ext', name: 'org.json.simple', version: '0.4'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.8'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.2'
+    testCompile group: 'org.junit.platform', name: 'junit-platform-commons', version: '1.5.2'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.2'
+    testCompile group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.5.2'
+    testCompile group: 'org.junit', name: 'junit-bom', version: '5.5.2'
+    testCompile group: 'org.apiguardian', name: 'apiguardian-api', version: '1.1.0'
+}
